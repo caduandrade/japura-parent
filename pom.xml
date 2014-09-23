@@ -179,6 +179,7 @@
 						<configuration>
 							<mavenExecutorId>forked-path</mavenExecutorId>
 							<remoteTagging>false</remoteTagging>
+							<suppressCommitBeforeTag>false</suppressCommitBeforeTag>
 						</configuration>
 					</plugin>
 				</plugins>
