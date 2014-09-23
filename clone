@@ -1,0 +1,6 @@
+hg clone ssh://caduandrade@hg.code.sf.net/p/japura/japura-util
+hg clone ssh://caduandrade@hg.code.sf.net/p/japura/japura-gui
+hg clone ssh://caduandrade@hg.code.sf.net/p/japura/japura-debug
+git clone https://github.com/caduandrade/japura-framework.git
+hg clone ssh://caduandrade@hg.code.sf.net/p/japura/japura-framework-examples
+
