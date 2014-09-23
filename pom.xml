@@ -24,11 +24,11 @@
 	</licenses>
 
 	<scm>
-		<url>https://sourceforge.net/p/japura/japura-parent/ci/default/tree/</url>
-		<connection>scm:hg:ssh://caduandrade@hg.code.sf.net/p/japura/japura-parent</connection>
-		<developerConnection>scm:hg:ssh://caduandrade@hg.code.sf.net/p/japura/japura-parent</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+                <connection>scm:git:git@github.com:caduandrade/japura-parent.git</connection>
+                <url>scm:git:git@github.com:caduandrade/japura-parent.git</url>
+                <developerConnection>scm:git:git@github.com:caduandrade/japura-parent.git</developerConnection>
+                <tag>HEAD</tag>
+        </scm>
 
 	<developers>
 		<developer>
