@@ -8,7 +8,7 @@
 
 	<groupId>org.japura</groupId>
 	<artifactId>japura-parent</artifactId>
-	<version>7.0.0-SNAPSHOT</version>
+	<version>7.0.0</version>
 	<packaging>pom</packaging>
 
 	<name>Japura</name>
@@ -24,11 +24,11 @@
 	</licenses>
 
 	<scm>
-                <connection>scm:git:git@github.com:caduandrade/japura-parent.git</connection>
-                <url>scm:git:git@github.com:caduandrade/japura-parent.git</url>
-                <developerConnection>scm:git:git@github.com:caduandrade/japura-parent.git</developerConnection>
-                <tag>HEAD</tag>
-        </scm>
+        <connection>scm:git:git@github.com:caduandrade/japura-parent.git</connection>
+        <url>scm:git:git@github.com:caduandrade/japura-parent.git</url>
+        <developerConnection>scm:git:git@github.com:caduandrade/japura-parent.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 
 	<developers>
 		<developer>
@@ -141,49 +141,23 @@
 				</executions>
 			</plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
 		</plugins>
 
 	</build>
-
-	<profiles>
-		<profile>
-			<id>release-sign-artifacts</id>
-			<activation>
-				<property>
-					<name>performRelease</name>
-					<value>true</value>
-				</property>
-			</activation>
-			<build>
-
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.5</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-release-plugin</artifactId>
-						<version>2.5.1</version>
-						<configuration>
-							<mavenExecutorId>forked-path</mavenExecutorId>
-						</configuration>
-					</plugin>
-				</plugins>
-
-			</build>
-		</profile>
-	</profiles>
 
 </project>
